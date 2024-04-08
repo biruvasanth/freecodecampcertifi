@@ -1,1 +1,50 @@
+@media only screen and (max-width:600px){}
+#navbar{
+left: 0;
+    top: 0;
+    width: 100%;
+    height: 10vh;
+    position: fixed;
+    background-color: rgb(232, 179, 179);
+    
+    
+   
+ }
+body{background-color: rgb(181, 161, 173);}
 
+.nav-bar ul li {list-style-type: none;float: left; padding-left: 60px; padding-right: 60px; }
+#welcome-section{display: flex;
+flex-direction: column;
+margin-top: 100px;/* 
+Add Margin to Content you can add a margin-top property to your text content container. 
+This will create a gap between the nav bar and the text, preventing overlap. 
+nav bar items overlapping the text content 
+ { top: 0; left: 0;, is actually the culprit behind your navigation bar overlapping the text 
+    content}
+*/
+ text-align: center;
+}
+.nav-bar a{text-decoration: none;}
+/* text-decoration: none Remove underline from links */
+
+
+nav-bar a::before {
+    
+    position: absolute; /* Absolute positioning relative to the link */
+    width: 100%; /* Span the full width of the link */
+    height: 100%; /* Cover the entire link area */
+    top: 0; /* Position at the top of the link */
+    left: 0; /* Align to the left edge of the link */
+    background-color: rgba(0, 0, 0, 0.2); /* Semi-transparent background color */
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease-in-out; /* Smooth transition on hover */
+  }
+ 
+     .nav-bar a:hover     {background-color: #adc210; /* Change background color on hover */
+        color: #950a0a; /* Change text color on hover */
+        opacity: 28;
+        border-color: rgb(25, 29, 21);
+        border-width: 6px;
+        border-style: solid;
+    }
+    .footer{background-color: rgb(132, 117, 168);}
